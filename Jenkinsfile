@@ -19,9 +19,9 @@ node('master') {
 		archiveArtifacts artifacts: 'target/*.war'
 	}
 	
-	/*stage ('Deployment'){
+	stage ('Deployment'){
 		sh 'cp target/*.war /opt/tomcat8/webapps'
-	}*/
+	}
 	stage ('Notification'){
 		//slackSend color: 'good', message: 'Deployment Sucessful'
 		emailext (
