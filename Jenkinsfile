@@ -15,10 +15,10 @@ node('master') {
 		//sh 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000'
 	}
 
-	stage ('Archive Artifacts'){
+	/*stage ('Archive Artifacts'){
 		archiveArtifacts artifacts: 'target/*.war'
 	}
-	
+	*/
 	stage ('Deployment'){
 		sh 'cp target/*.war /opt/tomcat8/webapps'
 	}
